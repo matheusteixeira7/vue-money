@@ -5,9 +5,9 @@
   "version": "0.4.9",
   "description": "Vue2 Vuetify TypeScript Startar project for Vite.",
   "author": {
-    "name": "Logue",
-    "email": "logue@hotmail.co.jp",
-    "url": "https://logue.dev/"
+    "name": "Matheus Teixeira",
+    "email": "matheusteixeira@devnine.tech",
+    "url": "https://devnine.tech"
   },
   "homepage": "https://github.com/logue/vite-vue2-vuetify-ts-starter",
   "repository": {
