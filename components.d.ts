@@ -9,6 +9,7 @@ declare module '@vue/runtime-core' {
     MainCard: typeof import('./src/components/dashboard/MainCard.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TransactionsList: typeof import('./src/components/dashboard/TransactionsList.vue')['default']
     VApp: typeof import('vuetify/lib')['VApp']
     VAvatar: typeof import('vuetify/lib')['VAvatar']
     VBtn: typeof import('vuetify/lib')['VBtn']
