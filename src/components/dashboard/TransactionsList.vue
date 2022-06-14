@@ -22,18 +22,24 @@
         }"
       >
         {{
-          transaction.value.toLocaleString("pt-BR", {
-            style: "currency",
-            currency: "BRL",
+          transaction.value.toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL',
           })
         }}
       </span>
 
       <div class="d-flex justify-space-between">
-        <span class="text-body-2" :style="{ color: $vuetify.theme.themes.light.text }">
+        <span
+          class="text-body-2"
+          :style="{ color: $vuetify.theme.themes.light.text }"
+        >
           {{ transaction.type }}
         </span>
-        <span class="text-body-2" :style="{ color: $vuetify.theme.themes.light.text }">
+        <span
+          class="text-body-2"
+          :style="{ color: $vuetify.theme.themes.light.text }"
+        >
           {{ transaction.date }}
         </span>
       </div>
@@ -42,7 +48,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@vue/composition-api";
+import { defineComponent } from '@vue/composition-api';
 
 export default defineComponent({
   data() {
@@ -50,47 +56,47 @@ export default defineComponent({
       transactions: [
         {
           id: 1,
-          title: "Desenvolvimento de site",
+          title: 'Desenvolvimento de site',
           value: 12000,
-          date: new Date().toLocaleDateString("pt-BR", {
-            year: "2-digit",
-            month: "numeric",
-            day: "numeric",
+          date: new Date().toLocaleDateString('pt-BR', {
+            year: '2-digit',
+            month: 'numeric',
+            day: 'numeric',
           }),
-          type: "Trabalho",
+          type: 'Trabalho',
         },
         {
           id: 2,
-          title: "Supermercado",
+          title: 'Supermercado',
           value: -2000,
-          date: new Date().toLocaleDateString("pt-BR", {
-            year: "2-digit",
-            month: "numeric",
-            day: "numeric",
+          date: new Date().toLocaleDateString('pt-BR', {
+            year: '2-digit',
+            month: 'numeric',
+            day: 'numeric',
           }),
-          type: "Casa",
+          type: 'Casa',
         },
         {
           id: 3,
-          title: "Prestação carro",
+          title: 'Prestação carro',
           value: -3000,
-          date: new Date().toLocaleDateString("pt-BR", {
-            year: "2-digit",
-            month: "numeric",
-            day: "numeric",
+          date: new Date().toLocaleDateString('pt-BR', {
+            year: '2-digit',
+            month: 'numeric',
+            day: 'numeric',
           }),
-          type: "Automóvel",
+          type: 'Automóvel',
         },
         {
           id: 4,
-          title: "Rendimento de investimentos",
+          title: 'Rendimento de investimentos',
           value: 8000,
-          date: new Date().toLocaleDateString("pt-BR", {
-            year: "2-digit",
-            month: "numeric",
-            day: "numeric",
+          date: new Date().toLocaleDateString('pt-BR', {
+            year: '2-digit',
+            month: 'numeric',
+            day: 'numeric',
           }),
-          type: "Investimentos",
+          type: 'Investimentos',
         },
       ],
     };
@@ -98,13 +104,15 @@ export default defineComponent({
   computed: {
     calculateIncome() {
       return this.transactions.reduce(
-        (acc, transaction) => (transaction.value > 0 ? acc + transaction.value : acc),
+        (acc, transaction) =>
+          transaction.value > 0 ? acc + transaction.value : acc,
         0
       );
     },
     calculateExpenses() {
       return this.transactions.reduce(
-        (acc, transaction) => (transaction.value < 0 ? acc + transaction.value : acc),
+        (acc, transaction) =>
+          transaction.value < 0 ? acc + transaction.value : acc,
         0
       );
     },

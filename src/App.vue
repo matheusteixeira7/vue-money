@@ -30,9 +30,9 @@
 </template>
 
 <script lang="ts">
-import DashboardHeaderVue from "./components/dashboard/DashboardHeader.vue";
-import MainCardVue from "./components/dashboard/MainCard.vue";
-import TransactionsListVue from "./components/dashboard/TransactionsList.vue";
+import DashboardHeaderVue from './components/dashboard/DashboardHeader.vue';
+import MainCardVue from './components/dashboard/MainCard.vue';
+import TransactionsListVue from './components/dashboard/TransactionsList.vue';
 
 export default {
   components: {
