@@ -1,6 +1,6 @@
-import type { VuetifyParsedTheme } from 'vuetify/types/services/theme';
-import Vuetify from 'vuetify/lib/framework';
 import Vue from 'vue';
+import Vuetify from 'vuetify/lib/framework';
+import type { VuetifyParsedTheme } from 'vuetify/types/services/theme';
 
 /*
 // Locale
@@ -9,8 +9,8 @@ import ja from 'vuetify/es5/locale/ja';
 import en from 'vuetify/es5/locale/en';
 */
 
-import { getCurrentInstance } from '@vue/composition-api';
 import '@mdi/font/css/materialdesignicons.css';
+import { getCurrentInstance } from '@vue/composition-api';
 import { loadFonts } from './webfontloader';
 
 loadFonts();
@@ -29,6 +29,23 @@ export default new Vuetify({
   },
 */
   theme: {
+    themes: {
+      light: {
+        primary: '#5429CC',
+        secondary: '#33CC95',
+        accent: '#6933FF',
+        error: '#E62E4D',
+        warning: '#ffeb3b',
+        info: '#ff9800',
+        success: '#8bc34a',
+
+        titles: '#363F5F',
+        text: '#969CB3',
+        background: '#F0F2F5',
+
+        white: '#FFFFFF',
+      },
+    },
     options: {
       themeCache: {
         // https://vuetifyjs.com/features/theme/#section-30ad30e330c330b730e5

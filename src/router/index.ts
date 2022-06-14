@@ -1,3 +1,6 @@
+import store from '@/store';
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 import type {
   NavigationGuardNext,
   Position,
@@ -5,36 +8,30 @@ import type {
   Route,
   RouteConfig,
 } from 'vue-router/types/router';
-import type { VuetifyGoToTarget } from 'vuetify/types/services/goto';
 import goTo from 'vuetify/lib/services/goto';
-import VueRouter from 'vue-router';
-import store from '@/store';
-import Vue from 'vue';
+import type { VuetifyGoToTarget } from 'vuetify/types/services/goto';
 
 // View
-import ErrorPage from '@/views/ErrorPage.vue';
-import AboutPage from '@/views/AboutPage.vue';
-import HomePage from '@/views/HomePage.vue';
 
 Vue.use(VueRouter);
 
 /** Router Config */
 const routes: RouteConfig[] = [
-  {
-    path: '/',
-    name: 'Home',
-    component: HomePage,
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: AboutPage,
-  },
-  {
-    path: '*',
-    name: 'Error',
-    component: ErrorPage,
-  },
+  // {
+  //   path: '/',
+  //   name: 'Home',
+  //   component: HomePage,
+  // },
+  // {
+  //   path: '/about',
+  //   name: 'About',
+  //   component: AboutPage,
+  // },
+  // {
+  //   path: '*',
+  //   name: 'Error',
+  //   component: ErrorPage,
+  // },
 ];
 
 const router: VueRouter = new VueRouter({
